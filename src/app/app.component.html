@@ -71,7 +71,42 @@
           <td> {{ valorPromesa }} </td>
           <td> asycn </td>          
           <td> {{ valorPromesa | async }} </td>
-        </tr>             
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date </td>          
+          <td> {{ fecha | date  }} </td>
+        </tr>     
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date: 'medium' </td>          
+          <td> {{ fecha | date: 'medium' }} </td>
+        </tr>           
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date: 'short' </td>          
+          <td> {{ fecha | date: 'short' }} </td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date: 'yyyy-MMMM-dd'  </td>          
+          <td> {{ fecha | date: 'yyyy-MMMM-dd' }} </td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date: 'yyyy-MMMM-dd':'':'en'  </td>          
+          <td> {{ fecha | date: 'yyyy-MMMM-dd':'':'en' }} </td>
+        </tr>
+        <tr>
+          <td> {{ fecha }} </td>
+          <td> date: 'yyyy-MMMM-dd':'':'{{idioma}}'   
+          <br>         
+          <button (click) = "btnEspaniol()" class="mr-1 btn btn-primary">Español</button>
+          <button (click) = "btnIngles()" class="mr-1 btn btn-secondary">Inglés</button>
+          <button (click) = "btnFrances()" class="mr-1 btn btn-dark">Francés</button>      
+          </td>
+          <td> {{ fecha | date: 'yyyy-MMMM-dd':'':idioma }} </td>
+        </tr>        
       </tbody>
     </table>
     <h4>Slice</h4>
